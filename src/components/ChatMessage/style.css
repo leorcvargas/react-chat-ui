@@ -1,0 +1,16 @@
+.chat-message {
+  background: #ffffff;
+  margin: 10px 0px;
+  padding: 8px;
+  border-radius: 5px;
+  width: auto;
+  max-width: 80%;
+}
+
+.not-owner {
+  align-self: flex-start;
+}
+
+.is-owner {
+  align-self: flex-end;
+}

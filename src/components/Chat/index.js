@@ -6,12 +6,13 @@ import Chatbox from '../Chatbox';
 import ChatHistoryWrapper from '../ChatHistoryWrapper';
 import ChatHistory from '../ChatHistory';
 import './style.css';
+import ChatMessage from '../ChatMessage';
 
 const Chat = () => {
-  const [messages, setMessages] = useState(['']);
+  const [messages, setMessages] = useState([{ value: 'Hi', isOwner: false }]);
 
-  const handleNewMessage = (message) => {
-    setMessages([...messages, message]);
+  const handleNewMessage = (value) => {
+    setMessages([...messages, { value, isOwner: true }]);
   }
 
   return (
@@ -27,7 +28,13 @@ const Chat = () => {
         <ChatHistoryWrapper>
           <ChatHistory>
             {
-              messages.map((message, index) => <div key={index}>{message}</div>)
+              messages.map((message, index) => (
+                <ChatMessage
+                  key={index}
+                  message={message.value}
+                  isOwner={message.isOwner}
+                />
+              ))
             }
           </ChatHistory>
         </ChatHistoryWrapper>

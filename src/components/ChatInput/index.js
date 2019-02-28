@@ -19,7 +19,6 @@ const ChatInput = ({ handleSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
       <input
-        name='chat-input'
         className='chat-input'
         placeholder='Digitar...'
         value={inputValue}
