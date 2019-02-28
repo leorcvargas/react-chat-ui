@@ -18,13 +18,6 @@ const Chat = () => {
   return (
     <div className='chat'>
       <Chatbox>
-        {/* <div className='chat-history-wrapper'>
-          <div className='chat-history'>
-            {
-              messages.map((message, index) => <div key={index}>{message}</div>)
-            }
-          </div>
-        </div> */}
         <ChatHistoryWrapper>
           <ChatHistory>
             {
