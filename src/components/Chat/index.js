@@ -11,7 +11,7 @@ import ChatMessage from '../ChatMessage';
 const Chat = () => {
   const [messages, setMessages] = useState([{ value: 'Hi', isOwner: false }]);
 
-  const handleNewMessage = (value) => {
+  const handleNewOwnerMessage = (value) => {
     setMessages([...messages, { value, isOwner: true }]);
   }
 
@@ -33,7 +33,7 @@ const Chat = () => {
         </ChatHistoryWrapper>
         <ChatInputWrapper>
           <ChatInput
-            handleSubmit={handleNewMessage}
+            handleSubmit={handleNewOwnerMessage}
           />
         </ChatInputWrapper>
       </Chatbox>
